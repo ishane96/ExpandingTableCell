@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uN7-um-IIS">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Artech Insuarance -->
+        <scene sceneID="eNF-Au-mxq">
+            <objects>
+                <viewController id="leb-si-G7m" customClass="MyPoliciesVC" customModule="ArtechTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MhC-97-wge">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="buT-S6-faJ">
+                                <rect key="frame" x="0.0" y="173.66666666666669" width="393" height="644.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="leb-si-G7m" id="tja-Vt-pq4"/>
+                                    <outlet property="delegate" destination="leb-si-G7m" id="Gi9-JH-Tfg"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Policies" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBn-aE-iwJ">
+                                <rect key="frame" x="20" y="113.00000000000001" width="353" height="45.666666666666671"/>
+                                <color key="tintColor" name="#002C5F"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" name="#002C5F"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cYL-wj-AUh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="buT-S6-faJ" firstAttribute="trailing" secondItem="cYL-wj-AUh" secondAttribute="trailing" id="1Du-sW-RjB"/>
+                            <constraint firstItem="ZBn-aE-iwJ" firstAttribute="top" secondItem="cYL-wj-AUh" secondAttribute="top" constant="10" id="9bk-b4-lxk"/>
+                            <constraint firstItem="buT-S6-faJ" firstAttribute="top" secondItem="ZBn-aE-iwJ" secondAttribute="bottom" constant="15" id="Fsq-a2-pSn"/>
+                            <constraint firstItem="buT-S6-faJ" firstAttribute="bottom" secondItem="cYL-wj-AUh" secondAttribute="bottom" id="WOs-aP-ZQb"/>
+                            <constraint firstItem="ZBn-aE-iwJ" firstAttribute="leading" secondItem="cYL-wj-AUh" secondAttribute="leading" constant="20" id="pHL-mA-pkn"/>
+                            <constraint firstItem="buT-S6-faJ" firstAttribute="leading" secondItem="cYL-wj-AUh" secondAttribute="leading" id="tzA-WR-xE7"/>
+                            <constraint firstItem="cYL-wj-AUh" firstAttribute="trailing" secondItem="ZBn-aE-iwJ" secondAttribute="trailing" constant="20" id="y3U-tt-u51"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Artech Insuarance " id="40R-bs-ewV"/>
+                    <connections>
+                        <outlet property="tableView" destination="buT-S6-faJ" id="VuD-MV-oRA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L2D-Pb-7kM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1232.824427480916" y="1037.323943661972"/>
+        </scene>
+        <!--Policies-->
+        <scene sceneID="AMs-dP-Wqi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uN7-um-IIS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Policies" image="list.bullet.clipboard" catalog="system" selectedImage="list.bullet.clipboard.fill" id="pbN-D0-TPZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rFv-ar-0eL">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="#002C5F"/>
+                        <color key="barTintColor" name="#002C5F"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="leb-si-G7m" kind="relationship" relationship="rootViewController" id="OtJ-Fu-bGL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="74C-l6-oLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="480" y="1037"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.bullet.clipboard" catalog="system" width="98" height="128"/>
+        <image name="list.bullet.clipboard.fill" catalog="system" width="98" height="128"/>
+        <namedColor name="#002C5F">
+            <color red="0.0" green="0.17254901960784313" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
